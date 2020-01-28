@@ -29,10 +29,14 @@ public class Sessao {
 
 	}
 
-	public Sessao(LocalTime horario, Sala sala, Filme filme) {
+	public Sessao(LocalTime horario, Filme filme, Sala sala) {
 		this.horario = horario;
 		this.sala = sala;
 		this.filme = filme;
+	}
+
+	public Integer getId() {
+		return id;
 	}
 
 	public LocalTime getHorario() {
