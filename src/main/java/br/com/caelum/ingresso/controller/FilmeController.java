@@ -69,7 +69,7 @@ public class FilmeController {
 
 		Filme filme = filmeDao.findOne(id);
 		List<Sessao> sessoes = sessaoDao.buscaSessoesPorFilme(filme);
-		
+
 		Optional<DetalhesDoFilme> detalheDoFilme = omdbClient.request(filme, DetalhesDoFilme.class);
 
 		modelAndView.addObject("sessoes", sessoes);
